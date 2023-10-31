@@ -28,7 +28,7 @@ For older docker compose, please comment out the ports line in gvm-tunnel-compos
 
 #### Start the containers
 
-    It will automatically pull the images as well if previous step was skipped.
+It will automatically pull the images as well if previous step was skipped.
 
     docker compose -f gvm-docker-compose.yml -f gvm-tunnel-compose.yml -p greenbone-community-edition up -d
 
