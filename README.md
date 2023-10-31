@@ -22,7 +22,14 @@ For older docker compose, please comment out the ports line in gvm-tunnel-compos
    
 ### Starting containers
 
-    # docker compose -f gvm-docker-compose.yml -f gvm-tunnel-compose.yml pull
+#### Optionally pull images
+
+    docker compose -f gvm-docker-compose.yml -f gvm-tunnel-compose.yml pull
+
+#### Start the containers
+
+    It will automatically pull the images as well if previous step was skipped.
+
     docker compose -f gvm-docker-compose.yml -f gvm-tunnel-compose.yml -p greenbone-community-edition up -d
 
 ## Destroy
