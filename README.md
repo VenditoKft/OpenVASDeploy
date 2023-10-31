@@ -17,6 +17,8 @@ Add .env file with and set the variable there. See .env.sample as an example.
 
     curl -f -L https://greenbone.github.io/docs/latest/_static/docker-compose-22.4.yml -o gvm-docker-compose.yml
     curl -f -L https://raw.githubusercontent.com/VenditoKft/OpenVASDeploy/main/tunnel.yml -o gvm-tunnel-compose.yml
+
+For older docker compose, please comment out the ports line in gvm-tunnel-compose.yml after downloading it.
    
 ### Starting containers
 
