@@ -34,7 +34,7 @@ It will automatically pull the images as well if previous step was skipped.
 
 ## Destroy
 
-    docker compose --remove-orphans -p greenbone-community-edition down -v
+    docker compose -p greenbone-community-edition down --remove-orphans -v
 
 ## Misc commands
 
