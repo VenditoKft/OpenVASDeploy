@@ -1,0 +1,17 @@
+networks:
+  vendito-tunnel:
+
+services:
+  gsa:
+    hostname: gsa
+    ports: !reset []
+    networks:
+      - vendito-tunnel
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    depends_on:
+      - gsa
+    command: "tunnel --no-autoupdate run --token \"${VENDITO_TUNNEL_TOKEN}\""
+    networks:
+      - vendito-tunnel
